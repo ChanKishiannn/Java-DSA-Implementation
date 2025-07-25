@@ -80,7 +80,6 @@ public class StackImplementation {
         }
     }
 class Stack{
-    int size;
     int top;
     int [] arrayStack;
     int limit;
