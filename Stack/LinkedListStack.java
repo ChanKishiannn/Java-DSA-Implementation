@@ -71,7 +71,8 @@ public class LinkedListStack {
                          break;
                     }
                     case 6:{
-                        stack.size();
+                        //Getting the size of the Stack
+                        stack.getSize();
                     }
                 }    
             }else{
@@ -83,50 +84,50 @@ public class LinkedListStack {
         while(userChoose != 7);
         }
 }
+//creating a class named node
 class Node{
     int number;
     Node next;
-    Node prev;
     
     
     public Node(int number){
         this.number = number;
         this.next = null;
-        this.prev = null;
     }
 }
+// creating a class named stack
 class Stack{
-    int limit;
-    Node head;
-    Node tail;
-    
+    private int limit;
+    private Node head;
     private int size = 0;
     
     public Stack(int limit){
         this.limit = limit;
     }
-    
+    //creating a push method on stack
     public void push(int number){
-        Node newNode = new Node(number);
-        size++;
-        if(head == null){
+        if(isFull()){
+            System.out.println("The Stack is Full! ");
+        }else{
+            Node newNode = new Node(number);
+            newNode.next = head;
             head = newNode;
-            tail = newNode;
-        }else{
-            tail.next = newNode;
-            tail = tail.next;
+            size++;
+            System.out.println("The " + number + " was successfully added to the Stack");
         }
     }
+    //creating a pop method on stack
     public void pop(){
-        size--;
-        if(tail == null){
-            System.out.println("There is no value inside the Stack! ");
+        if(isEmpty()){
+            System.out.println("The Stack is Empty!");;
+            
         }else{
-            Node temp;
-            tail.prev = head;
-            System.out.println();
+            System.out.println("Removing the Top Element: " + head.number);
+            head = head.next;
+            size--;
         }
     }
+    //creating a method to checking if the stack is full
     public boolean isFull(){
         if(size == limit){
             return true;
@@ -134,22 +135,25 @@ class Stack{
             return false;
         }
     }
+     //creating a method to checking if the stack is empty
     public boolean isEmpty(){
-        if(size == 0){
-            return true;
-        }else{
-            return false;
-        }
+       if(size == 0){
+           return true;
+       }else{
+           return false;
+       }
     }
-    public void size(){
-        System.out.println(size);
+     //creating a method to checking the size of the stack
+    public void getSize(){
+       System.out.println(size);
     }
+     //creating a method to checking the top of the stack
     public void peek(){
-        Node temp;
-        
-        temp = tail;
-        
-        System.out.println(temp);
+       if (isEmpty()) {
+            System.out.println("Stack is empty. No top element.");
+        } else {
+            System.out.println("Top element is: " + head.number);
+        }
     }
 }
 
