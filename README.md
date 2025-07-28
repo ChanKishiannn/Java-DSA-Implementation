@@ -27,6 +27,8 @@ Each folder contains Java DSA implementations based on:
 - **Stack**
   - `ArrayStack` – Basic stack operations using arrays
   - `LinkedListStack` – Basic stack operations using LinkedList
+- **Queue**
+  - `ArrayQueue` – Basic queue operations using array
   - *(More coming soon)*
 - **LinkedList**
   - `ReverseLinkedList` – ReverseLinkedList operations practice
