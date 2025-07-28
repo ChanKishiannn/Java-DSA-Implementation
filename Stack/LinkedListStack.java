@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class LinkedListStack {  
     
-    
+    //creating a method to ask the user what input the program have
     public static void questionier(){
         System.out.println("Please Choose the Following"
                    + "\n Press [1] to Add number on Stack"
