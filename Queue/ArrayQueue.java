@@ -32,6 +32,15 @@ public class ArrayQueue {
         until the user input the specific command to exit the program */
         int userInput;
         do{
+            //Asking the user what input should we put to run the program
+        System.out.println("Enter what command you want to run in the system"
+                + "\n 1. Add Number in to Queue"
+                + "\n 2. Delete the First Number in Queue"
+                + "\n 3. Check if the Queue is Full"
+                + "\n 4. Check if the Queue is Empty"
+                + "\n 5. To Exit the Program");
+        
+        
             //Getting the user input
             System.out.println("\nEnter your Choice");
             userInput = input.nextInt();
