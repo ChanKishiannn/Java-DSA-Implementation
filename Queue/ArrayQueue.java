@@ -18,16 +18,6 @@ public class ArrayQueue {
         and place the capacity inside the object Queue */
         Queue queue = new Queue(capacity);
         
-        
-        //Asking the user what input should we put to run the program
-        System.out.println("Enter what command you want to run in the system"
-                + "\n 1. Add Number in to Queue"
-                + "\n 2. Delete the First Number in Queue"
-                + "\n 3. Check if the Queue is Full"
-                + "\n 4. Check if the Queue is Empty"
-                + "\n 5. To Exit the Program");
-        
-        
         /*Making a do while loop to loop the program
         until the user input the specific command to exit the program */
         int userInput;
@@ -77,9 +67,8 @@ public class ArrayQueue {
                         break;
                     }
                     case 4:{
-                        /*if the user input 3 it run this program where it check the
-                        if the queue is empty
-                        */
+                        /*if the user input 4 it runs this program to check
+                        if the queue is empty */
                         if(queue.isEmpty()){
                             System.out.println("The Queue is Empty!");
                         }else{
