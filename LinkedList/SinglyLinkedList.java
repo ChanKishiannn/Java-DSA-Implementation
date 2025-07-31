@@ -58,6 +58,18 @@ class SinglyLinkedList{
                 currentNode = currentNode.next;
             }
         }
+    } 
+    public void addNum(int userInput){
+        int newNumber = userInput;
+        if(isEmpty()){
+            System.out.println("The List is Empty! Add number first");
+        }else{
+            while(newNumber > nodeCount){
+                int temp;
+                temp = nodeCount = 0;
+                
+            }
+        }
     }
     public boolean isEmpty(){
         if(head == null){
