@@ -59,16 +59,17 @@ class SinglyLinkedList{
             }
         }
     } 
-    public void addNum(int userInput){
-        int newNumber = userInput;
+    public void addNum(int newNodePosition, int newNodeValue){
+        Node newNode = new Node(newNodeValue);
         if(isEmpty()){
             System.out.println("The List is Empty! Add number first");
         }else{
-            while(newNumber > nodeCount){
-                int temp;
-                temp = nodeCount = 0;
-                
+            Node current = head;  
+            for(int i = 0; i < newNodePosition; i++){
+            current = current.next;
             }
+            newNode.next = current.next;
+            current.next = newNode;
         }
     }
     public boolean isEmpty(){
