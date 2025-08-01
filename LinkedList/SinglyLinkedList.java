@@ -7,6 +7,7 @@ package linkedlist;
 public class LinkedList {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
+        
     }   
 }
 class Node{
@@ -65,12 +66,21 @@ class SinglyLinkedList{
             System.out.println("The List is Empty! Add number first");
         }else{
             Node current = head;  
-            for(int i = 0; i < newNodePosition; i++){
+            
+            if(newNodePosition < 0 || newNodePosition >= nodeCount){
+                System.out.println("Invalid Node Position Value!");
+            }else{
+               for(int i = 0; i < newNodePosition; i++){
             current = current.next;
             }
             newNode.next = current.next;
-            current.next = newNode;
+            current.next = newNode; 
+            }
+            if(newNode.next == null){
+                tail = newNode;
+            }
         }
+        nodeCount++;
     }
     public boolean isEmpty(){
         if(head == null){
