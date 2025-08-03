@@ -237,14 +237,18 @@ class SinglyLinkedList{
                 for(int i = 0; i < newNodePosition -1; i++){
                     current = current.next;
                 }
+                //Then when the new node find it place to be place then it insert the new node
                 newNode.next = current.next;
                 current.next = newNode; 
             }
+            //if the newNode.next is null then the new node that will be inserted are will be place in the last 
             if(newNode.next == null){
                tail = newNode;
             }
+            //Incrementing the nodeCount
             nodeCount++;
     }
+    //isEmpty method to check the list if it is empty or not
     public boolean isEmpty(){
         if(head == null){
             return true;
