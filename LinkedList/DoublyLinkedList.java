@@ -72,7 +72,7 @@ class DoublyLinkedList{
             nodeCount--;
         }
     }
-    public void addbetween(int nodePosition, int num){
+    public void addBetween(int nodePosition, int num){
         if(head == null){
             System.out.println("The list is Empty");
             return;
@@ -109,6 +109,24 @@ class DoublyLinkedList{
             nodeCount++;
         }
         
+    }
+    public void deleteBetween(int nodePosition){
+        if(head == null){
+            System.out.println("The list is Empty!");
+        }
+        Node currentNode = head;
+        
+        if(nodePosition > 0 && nodePosition < nodeCount){
+            for(int i = 0; i < nodePosition -1; i++){
+                currentNode = currentNode.next;
+            }    
+            Node temp = currentNode.prev;
+        
+            currentNode = currentNode.next;
+            currentNode.prev = temp;
+        }else{
+            System.out.println("Invalid number out of bounce");
+        }
     }
     public boolean isEmpty(){
         return nodeCount == 0;
