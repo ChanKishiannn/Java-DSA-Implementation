@@ -77,11 +77,33 @@ class DoublyLinkedList{
             System.out.println("The list is Empty");
             return;
         }else{
-            Node currentNode = head;
-            
-            if(nodePosition > 0 || nodePosition < nodeCount){
-                while(currentNode.next )
+            if(nodePosition < 0 || nodePosition > nodeCount){
+                System.out.println("Invalid adding the new number between the list!");
+                return;
             }
+            Node newNode = new Node(num);
+            
+            if(nodePosition == 0){
+                newNode.next = head;
+                head = newNode;
+                
+                if(tail == null){
+                    tail = newNode;
+                }
+            }else{
+                Node currentNode = head;
+                
+                for(int i = 0; i < nodePosition; i++){
+                    currentNode = currentNode.next;
+                }
+                currentNode = newNode;
+                newNode.next = currentNode.next;
+                newNode.prev = currentNode.prev;
+            }
+            if(tail.next == null){
+                tail = newNode;
+            }
+            nodeCount++;
         }
         
     }
