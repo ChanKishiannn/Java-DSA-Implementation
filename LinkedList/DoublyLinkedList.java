@@ -86,6 +86,7 @@ class DoublyLinkedList{
             if(nodePosition == 0){
                 newNode.next = head;
                 head = newNode;
+                head.prev = null;
                 
                 if(tail == null){
                     tail = newNode;
@@ -93,15 +94,17 @@ class DoublyLinkedList{
             }else{
                 Node currentNode = head;
                 
-                for(int i = 0; i < nodePosition; i++){
+                for(int i = 0; i < nodePosition - 1; i++){
                     currentNode = currentNode.next;
                 }
-                currentNode = newNode;
-                newNode.next = currentNode.next;
-                newNode.prev = currentNode.prev;
+                currentNode.next = newNode;
+                newNode.prev = currentNode;
+                newNode.next = newNode;
             }
-            if(tail.next == null){
+            if(nodePosition > nodeCount){
                 tail = newNode;
+                newNode.prev = tail.prev;
+                newNode.next = null;
             }
             nodeCount++;
         }
