@@ -72,6 +72,19 @@ class DoublyLinkedList{
             nodeCount--;
         }
     }
+    public void addbetween(int nodePosition, int num){
+        if(head == null){
+            System.out.println("The list is Empty");
+            return;
+        }else{
+            Node currentNode = head;
+            
+            if(nodePosition > 0 || nodePosition < nodeCount){
+                while(currentNode.next )
+            }
+        }
+        
+    }
     public boolean isEmpty(){
         return nodeCount == 0;
     }
