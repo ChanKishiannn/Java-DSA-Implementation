@@ -113,17 +113,18 @@ class DoublyLinkedList{
     public void deleteBetween(int nodePosition){
         if(head == null){
             System.out.println("The list is Empty!");
+            return;
         }
         Node currentNode = head;
         
-        if(nodePosition > 0 && nodePosition < nodeCount){
-            for(int i = 0; i < nodePosition -1; i++){
+        if(nodePosition > 0 && nodePosition < nodeCount - 1){
+            for(int i = 0; i < nodePosition; i++){
                 currentNode = currentNode.next;
-            }    
-            Node temp = currentNode.prev;
-        
-            currentNode = currentNode.next;
-            currentNode.prev = temp;
+            }
+            currentNode.prev.next = currentNode.next;
+            currentNode.next.prev = currentNode.prev;
+            
+            nodeCount--;
         }else{
             System.out.println("Invalid number out of bounce");
         }
