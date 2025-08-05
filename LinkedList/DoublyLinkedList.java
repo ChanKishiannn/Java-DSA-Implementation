@@ -88,27 +88,29 @@ class DoublyLinkedList{
                 head = newNode;
                 head.prev = null;
                 
-                if(tail == null){
-                    tail = newNode;
-                }
-            }else{
-                Node currentNode = head;
-                
-                for(int i = 0; i < nodePosition - 1; i++){
-                    currentNode = currentNode.next;
-                }
-                currentNode.next = newNode;
-                newNode.prev = currentNode;
-                newNode.next = newNode;
-            }
-            if(nodePosition > nodeCount){
+            }else if(nodePosition == nodeCount){
+                tail.next = newNode;
+                newNode.prev = tail;
                 tail = newNode;
-                newNode.prev = tail.prev;
                 newNode.next = null;
             }
+            else{
+                Node currentNode = head;
+                
+                for(int i = 0; i < nodePosition; i++){
+                    currentNode = currentNode.next;
+                }
+                newNode.next = currentNode;
+                newNode.prev = currentNode.prev;
+                
+                if (currentNode.prev != null) {
+                    currentNode.prev.next = newNode;
+                }
+                currentNode.prev = newNode;
+                
+            }
             nodeCount++;
-        }
-        
+        }  
     }
     public void deleteBetween(int nodePosition){
         if(head == null){
