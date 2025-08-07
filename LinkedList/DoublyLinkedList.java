@@ -15,13 +15,56 @@ public class LinkedList {
                 + "[3] to display all the number in the list"
                 + "[4] to add the number between the list"
                 + "[5] to check if the list is empty"
-                + "[6] to exit the program");
     }
+                + "[6] to exit the program");
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
         
         DoublyLinkedList list = new DoublyLinkedList();
+        
+        int userInput;
+        do{
+            menu();
+            userInput = scan.nextInt();
+            
+            switch(userInput){
+                case 1: {
+                    System.out.println("Please Enter you want to add in the list: ");
+                    int num = scan.nextInt();
+                    list.offer(num);
+                    
+                    break;
+                }
+                case  2: {
+                    list.pop();
+                    break;
+                }
+                case 3: {
+                    System.out.println("Please Enter where you want to the new number in the list: ");
+                    int nodePosition = scan.nextInt();
+                    
+                    System.out.println("Please Enter you want to add in the list: ");
+                    int num = scan.nextInt();
+                    
+                    list.addBetween(nodePosition, num);
+                }
+                case 4: {
+                    System.out.println("Please Enter where you want to delete number in the list: ");
+                    int deletedPosition = scan.nextInt();
+                    
+                    list.deleteBetween(deletedPosition);
+                }
+                case 5: {
+                    if(list.isEmpty()){
+                        System.out.println("The list is Empty! ");
+                    }else{
+                        System.out.println("The list is NOT Empty! ");
+                    }
+                }
+            }
+            
+        }while(userInput != 6);
     }
 }
 class Node{
