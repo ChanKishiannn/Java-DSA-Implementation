@@ -28,45 +28,48 @@ public class LinkedList {
             menu();
             userInput = scan.nextInt();
             
-            switch(userInput){
-                case 1: {
-                    System.out.println("Please Enter you want to add in the list: ");
-                    int num = scan.nextInt();
-                    list.offer(num);
-                    
-                    break;
-                }
-                case  2: {
-                    list.pop();
-                    break;
-                }
-                case 3: {
-                    System.out.println("Please Enter where you want to the new number in the list: ");
-                    int nodePosition = scan.nextInt();
-                    
-                    System.out.println("Please Enter you want to add in the list: ");
-                    int num = scan.nextInt();
-                    
-                    list.addBetween(nodePosition, num);
-                    break;
-                }
-                case 4: {
-                    System.out.println("Please Enter where you want to delete number in the list: ");
-                    int deletedPosition = scan.nextInt();
-                    
-                    list.deleteBetween(deletedPosition);
-                    break;
-                }
-                case 5: {
-                    if(list.isEmpty()){
-                        System.out.println("The list is Empty! ");
-                    }else{
-                        System.out.println("The list is NOT Empty! ");
+            if(userInput > 0 && userInput < 6){
+                switch(userInput){
+                    case 1: {
+                        System.out.println("Please Enter you want to add in the list: ");
+                        int num = scan.nextInt();
+                        list.offer(num);
+
+                        break;
                     }
-                    break;
-                }
+                    case  2: {
+                        list.pop();
+                        break;
+                    }
+                    case 3: {
+                        System.out.println("Please Enter where you want to the new number in the list: ");
+                        int nodePosition = scan.nextInt();
+
+                        System.out.println("Please Enter you want to add in the list: ");
+                        int num = scan.nextInt();
+
+                        list.addBetween(nodePosition, num);
+                        break;
+                    }
+                    case 4: {
+                        System.out.println("Please Enter where you want to delete number in the list: ");
+                        int deletedPosition = scan.nextInt();
+
+                        list.deleteBetween(deletedPosition);
+                        break;
+                    }
+                    case 5: {
+                        if(list.isEmpty()){
+                            System.out.println("The list is Empty! ");
+                        }else{
+                            System.out.println("The list is NOT Empty! ");
+                        }
+                        break;
+                    }
+                }        
+            }else{
+                System.out.println("Invalid input Please Try Again! ");
             }
-            
         }while(userInput != 6);
     }
 }
