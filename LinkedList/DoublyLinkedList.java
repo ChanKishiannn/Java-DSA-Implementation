@@ -28,7 +28,7 @@ public class LinkedList {
             menu();
             userInput = scan.nextInt();
             
-            if(userInput > 0 && userInput < 6){
+            if(userInput > 0 && userInput < 7){
                 switch(userInput){
                     case 1: {
                         System.out.println("Please Enter you want to add in the list: ");
@@ -135,7 +135,8 @@ class DoublyLinkedList{
             if(nodePosition == 0){
                 newNode.next = head;
                 head = newNode;
-                head.prev = null;
+                head.prev = newNode;
+                newNode.prev = null;
                 
             }else if(nodePosition == nodeCount){
                 tail.next = newNode;
@@ -151,34 +152,48 @@ class DoublyLinkedList{
                 }
                 newNode.next = currentNode;
                 newNode.prev = currentNode.prev;
-                
-                if (currentNode.prev != null) {
-                    currentNode.prev.next = newNode;
-                }
+                currentNode.prev.next = newNode;
                 currentNode.prev = newNode;
                 
             }
             nodeCount++;
         }  
     }
-    public void deleteBetween(int nodePosition){
-        if(head == null){
-            System.out.println("The list is Empty!");
+    public void deleteBetween(int nodePosition) {
+    if (isEmpty()) {
+        System.out.println("The list is Empty!");
+        return;
+    }
+        if (nodePosition < 0 || nodePosition >= nodeCount) {
+            System.out.println("Invalid position!");
             return;
         }
-        Node currentNode = head;
+
+        if (nodePosition == 0) { // Delete head
+            head = head.next;
+        if (head != null) head.prev = null;
         
-        if(nodePosition > 0 && nodePosition < nodeCount - 1){
-            for(int i = 0; i < nodePosition; i++){
-                currentNode = currentNode.next;
-            }
-            currentNode.prev.next = currentNode.next;
-            currentNode.next.prev = currentNode.prev;
-            
-            nodeCount--;
-        }else{
-            System.out.println("Invalid number out of bounce");
+        
+        else tail = null; // list became empty
         }
+        
+        else if (nodePosition == nodeCount - 1) { // Delete tail
+            tail = tail.prev;
+            
+        if (tail != null)
+            tail.next = null;
+        else
+            head = null; // list became empty
+    }
+    else { // Delete middle node
+        Node currentNode = head;
+        for (int i = 0; i < nodePosition; i++) {
+            currentNode = currentNode.next;
+        }
+        currentNode.prev.next = currentNode.next;
+        currentNode.next.prev = currentNode.prev;
+    }
+    nodeCount--;
     }
     public boolean isEmpty(){
         return nodeCount == 0;
