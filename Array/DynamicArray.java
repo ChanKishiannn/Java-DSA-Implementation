@@ -14,6 +14,7 @@ public class DynamicArrayImplementaion {
         int capacity = input.nextInt();
         
         DynamicArray array = new DynamicArray(capacity);
+        
     }
     
 }
