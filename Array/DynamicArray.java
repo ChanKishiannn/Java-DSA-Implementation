@@ -18,30 +18,71 @@ public class DynamicArrayImplementaion {
     
 }
 class DynamicArray{
-    int currentIndex = 0;
+    int size = 0;
     int capacity;
-    int [] array;
+    Object [] array;
     
     public DynamicArray(int capacity){
         this.capacity = capacity;
-        this.array = new int [capacity];
+        this.array = new Object [capacity];
     }
     
-    public void add(int num){
-        currentIndex++;
-        
-        if(isFull() == false){
-            array[currentIndex] = num;
+    public void add(Object data){
+        if(size >= capacity){
+            grow();
+        }
+        array[size] = data;
+        size++;
+    }
+    public void delete(){
+        if(isEmpty()){
+            System.out.println("The Array is Empty!");
         }else{
-            array = new int[capacity * 2];
-             array[currentIndex] = num;
+            for(int i = 0; i < size - 1; i++){
+                array[i] = array[i + 1];
+            }
+            array[size - 1] = null;
+            size--;
+            shrink();
         }
     }
-    public boolean isFull(){
-        if(currentIndex == capacity){
-            return true;
-        }else{
-            return false;
-        } 
+    public void grow(){
+        capacity = capacity * 2;
+        
+        Object [] newArray = new Object[capacity];
+        
+        for(int i = 0; i < size; i++){
+           newArray[i] = array[i];
+        }
+        
+        array = newArray;
+    }
+    public void shrink(){
+        if(size <= capacity / 2 && capacity > 1){
+            capacity = Math.max(1, capacity /2);
+            
+            Object [] newArray = new Object[capacity];
+        
+            for(int i = 0; i < size; i++){
+            newArray[i] = array[i];
+            }
+            
+        array = newArray;
+        }
+    }
+    public String toString(){
+        
+        String string  = "";
+        
+        for(int i = 0; i < size; i++){
+            string += array[i] + ", ";
+        }
+        if(!string.isEmpty()){
+            string = string.substring(0, string.length() - 2);
+        }
+        return string;
+    }
+    public boolean isEmpty(){
+        return size == 0;
     }
 }
