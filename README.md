@@ -31,7 +31,9 @@ Each folder contains Java DSA implementations based on:
   - `ArrayQueue` – Basic queue operations using array
   - *(More coming soon)*
 - **LinkedList**
+  - `SinglyLinkedList`
+  - `DoublyLinkedList`
+  - `CircularLinkedList`
   - `ReverseLinkedList` – ReverseLinkedList operations practice
-  - *(More coming soon)*
 
 ---
