@@ -23,17 +23,22 @@ Each folder contains Java DSA implementations based on:
 - AI-generated challenges
 
 ### ✅ Implemented Topics
-
+- **Array**
+  - `Static Array`
+  - `Dynamic Array`
 - **Stack**
   - `ArrayStack` – Basic stack operations using arrays
   - `LinkedListStack` – Basic stack operations using LinkedList
 - **Queue**
   - `ArrayQueue` – Basic queue operations using array
-  - *(More coming soon)*
+  - `LinkedQueue` – Basic queue operations using LinkedList
 - **LinkedList**
   - `SinglyLinkedList`
   - `DoublyLinkedList`
   - `CircularLinkedList`
   - `ReverseLinkedList` – ReverseLinkedList operations practice
-
+- **Linear Search**
+  - `Linear Search Implementation 1`
+  - `Linear Search Implementation 2`
+  - `Linear Search Implementation 3`
 ---
