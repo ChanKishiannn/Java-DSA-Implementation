@@ -17,19 +17,26 @@ public class LinearSearch {
        
        Object index = linearSearch(array, search);
        
-       
-       if(index.checkValue == true){
+       if(index != false){
            System.out.println("Object [" + search + "] was NOT on the array!");
        }else{
            System.out.println("Object [" + search + "] was on the array!");
        }
     }
-    private static int linearSearch(Object []array, Object value){
+    private static Object linearSearch(Object []array, Object value){
+        boolean found;
         for(int i = 0; i < array.length; i++){
-            if(array[i].equals(value)){
-                return i; 
+            if(array[i] == value){  
+                return found = true;
             }
         }
-        return -1;
+        return found = false;
+    }
+}
+class checker{
+    boolean found;
+    
+    public checker(boolean found){
+        this.found = found;
     }
 }
