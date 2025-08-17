@@ -35,4 +35,18 @@ public class LinearSearch {
     /**
      * Performs a linear search on the given array.
      *
-     * @param a*
+     * @param array the array to search through
+     * @param value the value to search for
+     * @return the index of the value if found, otherwise -1
+     */
+    private static int linearSearch(int[] array, int value) {
+        // Iterate through the array to look for the value
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                return i; // return the index if the value is found
+            }
+        }
+        // Return -1 if the value is not found
+        return -1;
+    }
+}
