@@ -28,13 +28,13 @@ public class LinearSearch {
             if(array[i] instanceof Integer){
                 array[i].toString();
                 
-                if(array[i] == value){  
-                return i;
+                if(array[i] == value)  
+                return i; 
             }else{
-                if(array[i] == value){  
+                if(array[i] == value) 
                 return i;
-                }
-            }
+            } 
         }
-    return -1;
+        return -1;
+    }
 }
