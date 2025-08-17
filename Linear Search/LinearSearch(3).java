@@ -13,30 +13,25 @@ public class LinearSearch {
        Object [] array = {2,6,4,5, "Chan"};
            
        System.out.print("Enter the Object you want to search: ");
-       String search = input.next();
+       Object search = input.next();
        
-       Object index = linearSearch(array, search);
+       int index = linearSearch(array, search);
        
-       if(index != false){
+       if(index != -1){
            System.out.println("Object [" + search + "] was NOT on the array!");
        }else{
            System.out.println("Object [" + search + "] was on the array!");
        }
     }
-    private static Object linearSearch(Object []array, Object value){
-        boolean found;
+    private static int linearSearch(Object []array, Object value){
         for(int i = 0; i < array.length; i++){
+            if(array[i] instanceof Integer){
+                array[i].toString();
+            }
             if(array[i] == value){  
-                return found = true;
+                return i;
             }
         }
-        return found = false;
-    }
-}
-class checker{
-    boolean found;
-    
-    public checker(boolean found){
-        this.found = found;
+        return -1;
     }
 }
