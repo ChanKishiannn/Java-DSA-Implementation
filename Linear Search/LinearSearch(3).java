@@ -17,23 +17,23 @@ public class LinearSearch {
        
        int index = linearSearch(array, search);
        
-       if(index != 1){
+       if(index != -1){
            System.out.println("Object [" + search + "] was NOT on the array!");
        }else{
            System.out.println("Object [" + search + "] was on the array!");
        }
     }
-    private static int linearSearch(Object []array, Object value){
-        for(int i = 0; i < array.length; i++){
-            if(array[i] instanceof Integer){
-                array[i].toString();
-                
-                if(array[i] == value)  
-                return i; 
+    private static int linearSearch(Object[] array, Object value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] instanceof Integer) {
+                array[i].toString();  
+
+                if (array[i].equals(value))
+                    return i;
             }else{
-                if(array[i] == value) 
-                return i;
-            } 
+                if (array[i].equals(value))
+                    return i;
+            }
         }
         return -1;
     }
