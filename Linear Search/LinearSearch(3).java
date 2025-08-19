@@ -15,26 +15,25 @@ public class LinearSearch {
        System.out.print("Enter the Object you want to search: ");
        String search = input.next();
        
-       int index = linearSearch(array, search);
+       Object index = linearSearch(array, search);
        
-       if(index != -1){
-           System.out.println("Object [" + search + "] was NOT on the array!");
-       }else{
+       if(index){
            System.out.println("Object [" + search + "] was on the array!");
+       }else{
+           System.out.println("Object [" + search + "] was NOT on the array!");
        }
     }
-    private static int linearSearch(Object[] array, Object value) {
+    private static boolean linearSearch(Object[] array, Object value) {
+        String convert = null;
         for (int i = 0; i < array.length; i++) {
             if (array[i] instanceof Integer) {
-                array[i].toString();  
-
-                if (array[i].equals(value))
-                    return i;
-            }else{
-                if (array[i].equals(value))
-                    return i;
+                convert = String.valueOf(array[i]);
+                
+                
             }
+            if (convert.equals(value))
+                    return true;
         }
-        return -1;
+        return false;
     }
 }
