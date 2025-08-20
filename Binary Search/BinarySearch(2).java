@@ -31,7 +31,7 @@ public class BinarySearch {
                 
                 if(value < target){
                     low = middle + 1;
-                }else if(value < target){
+                }else if(value > target){
                     high = middle - 1;
                 }else{
                     return middle;
