@@ -41,4 +41,5 @@ Each folder contains Java DSA implementations based on:
   - `Linear Search Implementation 1`
   - `Linear Search Implementation 2`
   - `Linear Search Implementation 3`
+- **Interpolation Search**
 ---
