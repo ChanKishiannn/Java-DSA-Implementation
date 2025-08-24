@@ -45,6 +45,7 @@ Each folder contains Java DSA implementations based on:
   - `Binary Search Implementaion`
   - `Reverse Binary Search Implementaion`
 - **Interpolation Search**
+  - `Interpolation Search Implementaion`
 - **Bubble Sort**
 - **Selection Sort**
 - **Insertion Sort**
