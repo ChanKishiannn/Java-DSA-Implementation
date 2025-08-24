@@ -35,7 +35,7 @@ Each folder contains Java DSA implementations based on:
 - **LinkedList**
   - `SinglyLinkedList` – SinglyLinkedList Implementation
   - `DoublyLinkedList` – DoublyLinkedList Implementation
-  - `CircularLinkedList`
+  - `CircularLinkedList` – CircularLinkedList Implementation
   - `ReverseLinkedList` – ReverseLinkedList Implementation
 - **Linear Search**
   - `Linear Search Implementation 1`
