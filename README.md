@@ -24,8 +24,8 @@ Each folder contains Java DSA implementations based on:
 
 ### ✅ Implemented Topics
 - **Array**
-  - `Static Array` – Static Array Implementation(Basic Array)
-  - `Dynamic Array` – Static Array Implementation(Basic Array)
+  - `Static Array` – Static Array Implementation (Basic Array)
+  - `Dynamic Array` – Dynamic Array Implementation (Array that grow aswell as the data grows)
 - **Stack**
   - `ArrayStack` – Basic stack operations using arrays
   - `LinkedListStack` – Basic stack operations using LinkedList
