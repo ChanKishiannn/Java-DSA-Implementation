@@ -49,5 +49,6 @@ Each folder contains Java DSA implementations based on:
   - `Bubble Sort Algorithm Implementaion`
   - `Reverse Bubble Sort Algorithm Implementaion`
 - **Selection Sort**
+  - `Selection Sor Algorithm Implementaion`
 - **Insertion Sort**
 ---
