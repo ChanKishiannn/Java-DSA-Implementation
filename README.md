@@ -52,4 +52,5 @@ Each folder contains Java DSA implementations based on:
   - `Selection Sort Algorithm Implementaion`
   - `Reverse Selection Sort Algorithm Implementaion`
 - **Insertion Sort**
+  - `Insertion Sort Algorithm Implementaion`
 ---
