@@ -1,11 +1,11 @@
-# 📚 Java-DSA-Implementation – From Scratch
+# Java-DSA-Implementation – From Scratch
 
 Welcome to my personal collection of **Java Data Structures and Algorithms (DSA)** projects!  
 This repository serves as a coding journal where I build DSA solutions **from scratch** to better understand how algorithms and data structures work — and to track my progress as I continue learning Java.
 
 ---
 
-## 🚀 Purpose
+## Purpose
 
 As a self-taught developer, I created this repo to:
 
@@ -15,14 +15,14 @@ As a self-taught developer, I created this repo to:
 
 ---
 
-## 🧠 Topics Covered
+## Topics Covered
 
 Each folder contains Java DSA implementations based on:
 - Machine problems I saw online
 - Classic resources (books, school-style problems)
 - AI-generated challenges
 
-### ✅ Implemented Topics
+### Implemented Topics
 - **Array**
   - `Static Array` – Static Array Implementation (Basic Array)
   - `Dynamic Array` – Dynamic Array Implementation (Array that grow aswell as the data grows)
