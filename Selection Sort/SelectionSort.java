@@ -1,32 +1,32 @@
 package selectionsortimplementation;
+
 /**
  *
- * @author Christin M. Abuda
+ * @author Christian M. Abuda
  */
 public class SelectionSortImplementation {
-    public static void main(String[] args) {
-        int [] array = {9,1,2,5,6,8,7};
+    public static void main(String [] args){
+        int [] array = {8,1,9,4,6,2};
         
-        
-        selectionSort(array);
-        
-        System.out.print("This is Selection Sort: ");
-        for(int i: array){
-            System.out.print(i + " ");
-        }
+         selectionSort(array);
+         
+         System.out.println("Selection Sort: ");
+         for(int i : array){
+             System.out.print(i);
+         }
+         System.out.println("\n");
     }
     private static void selectionSort(int [] array){
         for(int i = 0; i < array.length - 1; i++){
-            int min = i;
+            int min = i;  
             for(int j = i + 1; j < array.length; j++){
                 if(array[min] > array[j]){
                     min = j;
-                    
-                }  
+                }
             }
             int temp = array[i];
             array[i] = array[min];
             array[min] = temp;
-        }  
+        }
     }
 }
