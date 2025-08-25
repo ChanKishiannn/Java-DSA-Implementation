@@ -1,10 +1,10 @@
-package insertionsortimplementation;
+package reverseinsertionsortimplementation;
 
 /**
  *
  * @author Christin M. Abuda
  */
-public class InsertionSortImplementation {
+public class ReverseInsertionSortImplementation {
     public static void main(String[] args) {
         int [] array = {9,1,2,5,6,8,7};
         
