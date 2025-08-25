@@ -1,9 +1,9 @@
-package selectionsortimplementation;
+package reverseselectionsortimplementation;
 /**
  *
  * @author Christin M. Abuda
  */
-public class SelectionSortImplementation {
+public class ReverseSelectionSortImplementation {
     public static void main(String[] args) {
         int [] array = {9,1,2,5,6,8,7};
         
