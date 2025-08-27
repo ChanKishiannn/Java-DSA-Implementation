@@ -9,7 +9,7 @@ public class RecursionImplementation {
         
         walk(5);
     }
-    private static int walk(int steps){
+    private static void walk(int steps){
         
         if(steps < 1) return;
         System.out.println("You Take a Steps");
