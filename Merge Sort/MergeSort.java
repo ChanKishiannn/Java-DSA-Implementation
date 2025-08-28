@@ -26,10 +26,19 @@ public class MergeSortImplementastion {
         int j = 0;
         
         for(; i < length;  i++){
-            
+            if(i < middle){
+                leftArray[i] = array[i];
+            }
+            else{
+                rightArray[j] = array[i];
+                j++;
+            }
         }
+        mergeSort(leftArray);
+        mergeSort(rightArray);
+        merge(leftArray, rightArray, array);
     }
-    private static void merge(int [] leftArray, int [] rightArray, int array){
+    private static void merge(int [] leftArray, int [] rightArray, int [] array){
         
     }
 }
