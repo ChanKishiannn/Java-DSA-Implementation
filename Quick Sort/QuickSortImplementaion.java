@@ -1,4 +1,5 @@
 package quicksortimplementation;
+
 /**
  *
  * @author Christian M. Abuda
@@ -10,6 +11,9 @@ public class QuickSortImplementation {
         for(int i : array){
             System.out.print(i + " ");
         }
+    }
+    private static void quickSort(int [] array, int [] start, int [] end){
+        
     }
     
 }
