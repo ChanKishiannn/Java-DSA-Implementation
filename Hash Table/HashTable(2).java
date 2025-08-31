@@ -18,7 +18,7 @@ public class HashTableImplementation {
         table.put(777, "Chan Key");
         
         for(Integer key : table.keySet()){
-            System.out.println(key + table.get(key));
+            System.out.println(key + " " + table.get(key));
         }
     }
     
