@@ -1,5 +1,6 @@
 package dynamicarrayimplementaion;
 
+
 import java.util.Scanner;
 
 /**
