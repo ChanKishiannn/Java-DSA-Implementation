@@ -1,7 +1,10 @@
-package hackerRank;
+package selectionsortimplementation;
 
-
-public class Solution{
+/**
+ *
+ * @author Christian M. Abuda
+ */
+public class SelectionSortImplementation {
     public static void main(String[] args) {
         int [] array = {8,7,1,9,5,10};
         
