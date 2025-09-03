@@ -1,7 +1,9 @@
-package hackerRank;
-
-
-public class Solution{
+package insertionsortImplementation;
+/**
+ *
+ * @author Christin M. Abuda
+ */
+public class InsertionSortImplementation{
     public static void main(String[] args) {
         int [] array = {8,7,1,9,5,10};
         
