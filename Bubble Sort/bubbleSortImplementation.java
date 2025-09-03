@@ -1,7 +1,9 @@
-package hackerRank;
-
-
-public class Solution{
+package bubblesortimplementation;
+/**
+ *
+ * @author Christian M. Abuda
+ */
+public class BubbleSortImplementation {
     public static void main(String[] args) {
         int [] array = {8,7,1,9,5,10};
         
