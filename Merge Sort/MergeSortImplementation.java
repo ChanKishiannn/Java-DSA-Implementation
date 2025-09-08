@@ -14,6 +14,26 @@ public class MergeSortImplementastion {
         }
     }
     private static void mergeSort(int [] array){
-       int arr
+       int length = array.length;
+       if(length <= 1)
+       return;
+       
+       
+       int middle = length / 2;
+       int [] leftArray = new int [middle];
+       int [] rightArray = new int [length - middle];
+       
+       int i = 0;
+       int j = 0;
+       
+        for(; i < length; i++){
+            if(i < middle){
+                leftArray[i] = array[i];
+            }else{
+                rightArray[j] = array[i];
+                j++;
+            }
+        }
+       
     }
 }
