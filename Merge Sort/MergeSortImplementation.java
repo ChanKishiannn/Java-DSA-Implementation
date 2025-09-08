@@ -63,7 +63,7 @@ public class MergeSortImplementastion {
                     l++;
             }
             while(r < rightSize){
-                array[i] = leftArray[r];
+                array[i] = rightArray[r];
                     i++;
                     r++;
         }
