@@ -1,7 +1,6 @@
 package linkedlist;
 
 import java.util.Scanner;
-
 /**
  *
  * @author Christian M. Abuda
