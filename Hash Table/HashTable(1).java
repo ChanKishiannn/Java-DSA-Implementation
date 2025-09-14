@@ -1,6 +1,5 @@
 package hashtableimplementation;
 import java.util.Hashtable;
-
 /**
  *
  * @author Christian M. Abuda
