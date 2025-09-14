@@ -1,5 +1,4 @@
 package interpolationsearch;
-
 /**
  *
  * @author Christian M. Abuda
