@@ -1,6 +1,7 @@
 package stackimplementation;
 
 import java.util.Scanner;
+
 /**
  *
  * @author Christian M. Abuda
